@@ -15,14 +15,15 @@ namespace Hosting
         static void Main(string[] args)
         {
             ServiceHost host = new ServiceHost(typeof(ClienteService));
-            Uri endereco = new Uri("http://localhost:8733/Design_Time_Addresses/WcfServiceLibrary1/Service1/");
-            /* Uri endereco = new Uri("http://localhost:8733/clientes"); */
+            Uri endereco = new Uri("http://localhost:8080/clientes");
+
             host.AddServiceEndpoint(typeof(IClienteService), new BasicHttpBinding(), endereco);
 
             try
             {
                 host.Open();
                 ExibirInformacoesServico(host);
+                Console.WriteLine("Serviço Rodando");
                 Console.ReadLine();
                 host.Close();
             }

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Passagens", "Passagens\Pass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hosting", "Hosting\Hosting.csproj", "{34CE9948-ABD8-4239-9B13-AB16A85011C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumindoServico", "ConsumindoServico\ConsumindoServico.csproj", "{C14691A2-384B-4774-B16C-E4FFD7A31A7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{34CE9948-ABD8-4239-9B13-AB16A85011C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34CE9948-ABD8-4239-9B13-AB16A85011C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34CE9948-ABD8-4239-9B13-AB16A85011C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C14691A2-384B-4774-B16C-E4FFD7A31A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C14691A2-384B-4774-B16C-E4FFD7A31A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C14691A2-384B-4774-B16C-E4FFD7A31A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C14691A2-384B-4774-B16C-E4FFD7A31A7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
