@@ -8,14 +8,11 @@ namespace Passagens
 {
     public class ClienteService : IClienteService
     {
-        public bool Add(string nome, string cpf)
+        public bool Add(Cliente c)
         {
             ClienteDAO dao = new ClienteDAO();
             try
             {
-                Cliente c = new Cliente();
-                c.Nome = nome;
-                c.Cpf = cpf;
                 dao.add(c);
                 return true;
             }
