@@ -13,9 +13,13 @@ namespace Passagens
     {
         [OperationContract]
         Cliente Buscar(string nome);
+
         [OperationContract]
         [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Xml, UriTemplate = "addCliente/{nome};{cpf}")]
-        void Add(string nome, string cpf);
+        bool Add(string nome, string cpf);
 
+        [OperationContract]
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Xml, UriTemplate = "getClientes/")]
+        List<Cliente> getClientes();
     }
 }
