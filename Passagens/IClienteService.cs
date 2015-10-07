@@ -12,6 +12,7 @@ namespace Passagens
     public interface IClienteService
     {
         [OperationContract]
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Xml, UriTemplate = "SearchCliente/{nome}")]
         Cliente Buscar(string nome);
 
         [OperationContract]
