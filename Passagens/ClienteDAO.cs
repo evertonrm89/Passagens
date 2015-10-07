@@ -8,14 +8,14 @@ namespace Passagens
 {
     class ClienteDAO
     {
-        static List<Cliente> clientes = new List<Cliente>();
+        public static List<Cliente> clientes = new List<Cliente>();
 
         public void add(Cliente c)
         {
             ClienteDAO.clientes.Add(c);
         }
 
-        public Cliente Buscar (string nome)
+        public Cliente Buscar(string nome)
         {
             var resultado = ClienteDAO.clientes.Where(c => c.Nome.Equals(nome)).FirstOrDefault();
 

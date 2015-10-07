@@ -8,20 +8,17 @@ namespace Passagens
 {
     public class ClienteService : IClienteService
     {
-        public bool Add(Cliente c)
+        public void Add(Cliente c)
         {
             ClienteDAO dao = new ClienteDAO();
             try
             {
                 dao.add(c);
-                return true;
             }
             catch
             {
-                //Salvar Log
+              
             }
-
-            return false;
 
         }
 

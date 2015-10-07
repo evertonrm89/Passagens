@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Passagens", "Passagens\Pass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hosting", "Hosting\Hosting.csproj", "{34CE9948-ABD8-4239-9B13-AB16A85011C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumindoServico", "ConsumindoServico\ConsumindoServico.csproj", "{7B55698F-7697-48A3-A7A5-784253B915DC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EED93A07-2C65-4B9E-9F5E-8F0625B10493} = {EED93A07-2C65-4B9E-9F5E-8F0625B10493}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,10 @@ Global
 		{34CE9948-ABD8-4239-9B13-AB16A85011C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34CE9948-ABD8-4239-9B13-AB16A85011C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34CE9948-ABD8-4239-9B13-AB16A85011C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B55698F-7697-48A3-A7A5-784253B915DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B55698F-7697-48A3-A7A5-784253B915DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B55698F-7697-48A3-A7A5-784253B915DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B55698F-7697-48A3-A7A5-784253B915DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

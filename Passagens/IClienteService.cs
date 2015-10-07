@@ -13,7 +13,7 @@ namespace Passagens
         [OperationContract]
         Cliente Buscar(string nome);
         [OperationContract]
-        bool Add(Cliente c);
+        void Add(Cliente c);
 
     }
 }
