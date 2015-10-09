@@ -48,15 +48,14 @@ namespace Passagens
         public List<Cliente> getClientes()
         {
             List<Cliente> clientes = new List<Cliente>();
-            Cliente cliente = new Cliente();
-
-
+            
             sqlConn.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM clientes", sqlConn);
             SqlDataReader dr = cmd.ExecuteReader();
 
             while (dr.Read())
             {
+                Cliente cliente = new Cliente();
                 cliente.Nome = dr["nome"].ToString();
                 cliente.Cpf = dr["cpf"].ToString();
 
