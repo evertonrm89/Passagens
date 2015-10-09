@@ -26,8 +26,11 @@ namespace Passagens
         }
 
         public List<Cliente> getClientes()
-        {
-            return ClienteDAO.clientes;
+        { 
+            ClienteDAO dao = new ClienteDAO();
+            List<Cliente> clientes = dao.getClientes();
+
+            return clientes;
         }
     }
 
