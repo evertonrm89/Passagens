@@ -27,11 +27,8 @@ namespace ConsumindoServico
             string cpf = txtCpf.Text;
 
             ClienteServiceClient servico = new ClienteServiceClient();
-
-            Cliente clienteCadastro = new Cliente();
-            clienteCadastro.Nome = nome;
-            clienteCadastro.Cpf = cpf;
-            servico.Add(clienteCadastro);
+     
+            servico.Add(nome, cpf);
 
             MessageBox.Show("Cliente Cadastrado com Sucesso");
         }

@@ -19,6 +19,12 @@
   <wsdl:message name="IClienteService_Add_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddResponse" />
   </wsdl:message>
+  <wsdl:message name="IClienteService_getClientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClientes" />
+  </wsdl:message>
+  <wsdl:message name="IClienteService_getClientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClientesResponse" />
+  </wsdl:message>
   <wsdl:portType name="IClienteService">
     <wsdl:operation name="Buscar">
       <wsdl:input wsaw:Action="http://tempuri.org/IClienteService/Buscar" message="tns:IClienteService_Buscar_InputMessage" />
@@ -27,6 +33,10 @@
     <wsdl:operation name="Add">
       <wsdl:input wsaw:Action="http://tempuri.org/IClienteService/Add" message="tns:IClienteService_Add_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClienteService/AddResponse" message="tns:IClienteService_Add_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getClientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteService/getClientes" message="tns:IClienteService_getClientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteService/getClientesResponse" message="tns:IClienteService_getClientes_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IClienteService" type="tns:IClienteService">
@@ -42,6 +52,15 @@
     </wsdl:operation>
     <wsdl:operation name="Add">
       <soap:operation soapAction="http://tempuri.org/IClienteService/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientes">
+      <soap:operation soapAction="http://tempuri.org/IClienteService/getClientes" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

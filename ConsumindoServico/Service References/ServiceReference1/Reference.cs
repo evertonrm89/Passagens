@@ -85,10 +85,16 @@ namespace ConsumindoServico.ServiceReference1 {
         System.Threading.Tasks.Task<ConsumindoServico.ServiceReference1.Cliente> BuscarAsync(string nome);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClienteService/Add", ReplyAction="http://tempuri.org/IClienteService/AddResponse")]
-        void Add(ConsumindoServico.ServiceReference1.Cliente c);
+        bool Add(string nome, string cpf);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClienteService/Add", ReplyAction="http://tempuri.org/IClienteService/AddResponse")]
-        System.Threading.Tasks.Task AddAsync(ConsumindoServico.ServiceReference1.Cliente c);
+        System.Threading.Tasks.Task<bool> AddAsync(string nome, string cpf);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClienteService/getClientes", ReplyAction="http://tempuri.org/IClienteService/getClientesResponse")]
+        ConsumindoServico.ServiceReference1.Cliente[] getClientes();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClienteService/getClientes", ReplyAction="http://tempuri.org/IClienteService/getClientesResponse")]
+        System.Threading.Tasks.Task<ConsumindoServico.ServiceReference1.Cliente[]> getClientesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -126,12 +132,20 @@ namespace ConsumindoServico.ServiceReference1 {
             return base.Channel.BuscarAsync(nome);
         }
         
-        public void Add(ConsumindoServico.ServiceReference1.Cliente c) {
-            base.Channel.Add(c);
+        public bool Add(string nome, string cpf) {
+            return base.Channel.Add(nome, cpf);
         }
         
-        public System.Threading.Tasks.Task AddAsync(ConsumindoServico.ServiceReference1.Cliente c) {
-            return base.Channel.AddAsync(c);
+        public System.Threading.Tasks.Task<bool> AddAsync(string nome, string cpf) {
+            return base.Channel.AddAsync(nome, cpf);
+        }
+        
+        public ConsumindoServico.ServiceReference1.Cliente[] getClientes() {
+            return base.Channel.getClientes();
+        }
+        
+        public System.Threading.Tasks.Task<ConsumindoServico.ServiceReference1.Cliente[]> getClientesAsync() {
+            return base.Channel.getClientesAsync();
         }
     }
 }
