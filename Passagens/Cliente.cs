@@ -11,7 +11,7 @@ namespace Passagens
     public class Cliente
     {
         [DataMember]
-        public string Nome {get; set;}
+        public string Nome {get; protected set;}
         [DataMember]
         public string Cpf {get; set;}
     }
